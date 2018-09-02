@@ -75,9 +75,9 @@ My preprocess includes grayscale, normalization, and, contrast limited adaptive 
 
 Here is an example of each proccessed image.
 
-Original
+
 ![alt text][original]
-Grayscale
+
 ![alt text][gray] 
 
 As a last step, I normalized the image data because ...
