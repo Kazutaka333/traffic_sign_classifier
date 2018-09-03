@@ -236,7 +236,7 @@ The code for making predictions on my final model is located in the 11th cell of
 |	4.01502e-05|  	 Speed limit (80km/h)   |
 |	1.75141e-05|  	 Speed limit (100km/h)   |
 
-Even though the prediction is correct on this sign, the model considers a little bit of possibility that the sign could be Speed limit (70km/h) or Speed limit (20km/h).
+Even though the prediction is correct on image 4, the model considers a little bit of possibility that the sign could be Speed limit (70km/h) or Speed limit (20km/h).
 
   
 *image 5*
