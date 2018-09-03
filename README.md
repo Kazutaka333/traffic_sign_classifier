@@ -18,6 +18,7 @@
 [img3]: ./writeup_images/img3.jpg
 [img4]: ./writeup_images/img4.jpg
 [img5]: ./writeup_images/img5.jpg
+[bar_chart]: ./writeup_images/bar_chart.png
 
 
 
