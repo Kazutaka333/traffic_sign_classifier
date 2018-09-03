@@ -35,14 +35,7 @@ The goals / steps of this project are the following:
 [img4]: ./writeup_images/img4.jpg
 [img5]: ./writeup_images/img5.jpg
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[bar_chart]: ./writeup_images/bar_chart.png
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -186,21 +179,74 @@ Here are the results of the prediction:
 | No passing            | No passing           | 
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 6 of the 6 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of accuracy 95.5%.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+*image 0*
 
 | Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+|:--------------------:|:---------------------------:| 
+| 1.00 (lost precision)| Yield   									| 
+| 8.28896e-14 	        | No vehicles						| 
+|	5.02711e-15 	        | Priority road						| 
+|	4.1249e-15 	         | Stop						| 
+|	7.78334e-16 	        | Keep right						| 
 
+*image 1*
 
-For the second image ... 
+| Probability         	|     Prediction	        					| 
+|:--------------------:|:---------------------------:| 
+| 0.999994    | 	 Turn right ahead |
+|	5.67283e-06 |	 Ahead only |
+|	6.09594e-10 |	 No vehicles |
+|	4.83902e-10 |	 Keep left |
+| 2.11305e-10 |	 Roundabout mandatory |
+
+*image 2*
+
+| Probability         	|     Prediction	        					| 
+|:--------------------:|:---------------------------:| 
+| 1.0 (lost precision)  |   	 Priority road |
+| 8.71962e-09 	|  Stop |
+| 2.33766e-09 	|  No vehicles |
+| 7.9627e-10 	 | End of all speed and passing limits |
+| 3.52491e-10 	|  No passing |
+  
+*image 3*
+
+| Probability         	|     Prediction	        					| 
+|:--------------------:|:---------------------------:| 
+| 0.998181    | 	 Speed limit (30km/h) |
+| 0.0010598   | 	 Speed limit (80km/h) |
+| 0.000508322 |   	 Speed limit (50km/h) |
+| 0.000196236 |  	 End of speed limit (80km/h) |
+| 3.89811e-05 | 	 Speed limit (20km/h) |
+  
+
+*image 4*
+
+| Probability         	|     Prediction	        					| 
+|:--------------------:|:---------------------------:| 
+| 0.7852     |  	 Speed limit (120km/h)   |
+|	0.10838    |  	 Speed limit (70km/h)   |
+|	0.10636    |  	 Speed limit (20km/h)   |
+|	4.01502e-05|  	 Speed limit (80km/h)   |
+|	1.75141e-05|  	 Speed limit (100km/h)   |
+
+Even though the prediction is correct on this sign, the model considers a little bit of possibility that the sign could be Speed limit (70km/h) or Speed limit (20km/h).
+
+  
+*image 5*
+
+| Probability         	|     Prediction	        					| 
+|:--------------------:|:---------------------------:| 
+| 0.999999    | 	 No passing |
+| 7.57351e-07 |	 Slippery road |
+| 1.13976e-07 |	 No passing for vehicles over 3.5 metric tons |
+| 1.96753e-08 |	 End of no passing |
+| 4.60882e-09 |	 Dangerous curve to the right |
+
+![][bar_chart]
