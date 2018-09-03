@@ -64,11 +64,14 @@ signs data set:
 
 Here are histograms of training, validation, test set categorized into each sign class.
 
-![training histogram][train_hist]
 
-![validation histogram][valid_hist]
 
-![test histogram][test_hist]
+![training histogram][train_hist] |  ![validation histogram][valid_hist]
+:--------------------------------:|:------------------------------------:
+![test histogram][test_hist]      |  
+
+
+
 
 ### Design and Test a Model Architecture
 
@@ -79,23 +82,22 @@ As a first step, I decided to convert the images to grayscale because that reduc
 Here is an example of each proccessed image.
 
 
-![alt text][original]
-
-![alt text][gray]
-
-![alt_text][CLAHE]
-
-![alt_text][normalized]
+![alt text][original] | ![alt text][gray] | ![alt_text][normalized] |![alt_text][CLAHE]
+:--------------------:|:-----------------:|:-----------------------:|:-----------------:
+ | | |
 
 To obtain the better accuracy, I've created augmented data from the training set. For preventing fake data from being too much noise for the model, the augmentation process needed to be one that alter the original image a little bit and randomly and I've added three ways of image modification; warping, zooming, and, tilting. Augmented data is created from applying those three methods by a random small extent.
 
 Here are a couple of examples of an augmented image:
 
-![alt text][augmented1]
 
-![alt text][augmented2]
 
-![alt text][augmented3]
+
+
+
+![alt text][augmented1] | ![alt text][augmented2] | ![alt text][augmented3] 
+:--------------------:|:-----------------:|:-----------------------:
+ | | |
 
 The difference between the original data set and the augmented data set is the following ... 
 
