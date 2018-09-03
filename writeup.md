@@ -92,16 +92,13 @@ To obtain the better accuracy, I've created augmented data from the training set
 Here are a couple of examples of an augmented image:
 
 
-![alt text][augmented1] | ![alt text][augmented2] | ![alt text][augmented3] 
-:--------------------:|:-----------------:|:-----------------------:
- | | |
+![alt text][augmented1]  ![alt text][augmented2]  ![alt text][augmented3] 
+
 
 The difference between the original data set and the augmented data set is shown in the following histograms.
 I created augmented data for each class in a way that the number of images in each class does not exceed the original maximum number of images in one class so that the number of fake data is not too much that dominates the model.
 
-![alt text][train_hist] | ![alt text][augmented_hist] 
-:--------------------:|:-----------------:
- | | |
+![alt text][train_hist]  ![alt text][augmented_hist] 
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
@@ -192,8 +189,3 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 
 For the second image ... 
-
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-#### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
-
-
