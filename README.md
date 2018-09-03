@@ -23,7 +23,7 @@
 
 ## German Traffic Sign Classifier
 
-This convnet has an architecture inspired by LeNet.
+This classifier has an architecture inspired by LeNet.
 
 | Layer          		|     Description																	         					| 
 |:----------------:|:---------------------------------------------:| 
@@ -66,7 +66,7 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 6 of the 6 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of accuracy 95.5%.
 
-The code for making predictions on my final model is located in the 20th cell of the Ipython notebook.
+These are the top five probabilities of predictions on each emage
 
 *image 0*
 
@@ -134,27 +134,16 @@ Even though the prediction is correct on image 4, the model considers a little b
 
 ![][bar_chart]
 
-The Project
----
-The goals / steps of this project are the following:
-* Load the data set
-* Explore, summarize and visualize the data set
-* Design, train and test a model architecture
-* Use the model to make predictions on new images
-* Analyze the softmax probabilities of the new images
-* Summarize the results with a written report
 
 ### Dependencies
-This lab requires:
+This program requires:
 
 * [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit)
 
-The lab environment can be created with CarND Term1 Starter Kit. Click [here](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) for the details.
 
 ### Dataset and Repository
 
-1. Download the data set. The classroom has a link to the data set in the "Project Instructions" content. This is a pickled dataset in which we've already resized the images to 32x32. It contains a training, validation and test set.
-2. Clone the project, which contains the Ipython notebook and the writeup template.
+* Clone the project, which contains the data.
 ```sh
 git clone https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project
 cd CarND-Traffic-Sign-Classifier-Project
