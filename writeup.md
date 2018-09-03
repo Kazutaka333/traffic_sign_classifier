@@ -28,6 +28,12 @@ The goals / steps of this project are the following:
 [augmented2]: ./writeup_images/augmented2.png "augmented image 2"
 [augmented3]: ./writeup_images/augmented3.png "augmented image 3"
 
+[img0]: ./writeup_images/img0.jpg
+[img1]: ./writeup_images/img1.jpg
+[img2]: ./writeup_images/img2.jpg
+[img3]: ./writeup_images/img3.jpg
+[img4]: ./writeup_images/img4.jpg
+[img5]: ./writeup_images/img5.jpg
 
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
@@ -67,9 +73,8 @@ Here are histograms of training, validation, test set categorized into each sign
 
 
 
-![training histogram][train_hist] |  ![validation histogram][valid_hist]
-:--------------------------------:|:------------------------------------:
-![test histogram][test_hist]      |  
+![training histogram][train_hist]  ![validation histogram][valid_hist] ![test histogram][test_hist] 
+ 
 
 
 
@@ -130,22 +135,30 @@ I did not changed so many parameters from the LeNet implementation in the course
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy of 0.997
+* validation set accuracy of 0.973
+* test set accuracy of 0.955
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+Since I was already comfortable with LeNet from the previous quiz, I've decided to try it out on this project too.
+
+* What were some problems with the initial architecture?
+
+With the initial architecture, the accuracy was about 80%, which was not as high as 93%. This architecture tended to overfit.
+
+* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
+
+Since I knew the number of images in each class was not even and simply more different images should improve the model, the augmented images were added in the manner explained above. From the gap between validation accuracy and training accuracy, I added dropout layer to avoid overfitting. In fact, I also tried the architecture on the provided research paper (Traffic Sign Recognition with Multi-Scale Convolutional Networks by Pierre Sermanet and Yann LeCun) but the validation accuracy never went up above 86%. After that, I made a lot of small tweak on the augmentation method. At the end, changing the normalization from the one provided in the note to the division by 255(÷255) shows drastic improvements on the validation accuracy. I was not sure why this happned and another student also claimed the same thing happened. The mentor I asked was not sure either. 
+
+* Which parameters were tuned? How were they adjusted and why?
+
+I increased epoch to gain more accuracy. I increased the number of augmented data way more than I have right now to see if it shows any improvement.
+
+* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
  
+Convolutional layer can extract a certain feature in an image. Each traffic sign that is meant to be not to mistaken by human has very distinctive visual feature. This is why convnet works well with this problem. Dropout and augmented data regularize the model and prevent overfitting. However, I have to say the thing that prevents me from submitting a project was definitely the normalization.
 
 ### Test a Model on New Images
 
@@ -153,8 +166,7 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][img0] ![alt text][img1] ![alt text][img2] ![alt text][img3] ![alt text][img4] ![alt text][img5]
 
 The first image might be difficult to classify because ...
 
