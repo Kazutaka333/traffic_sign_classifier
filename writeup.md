@@ -166,21 +166,24 @@ Convolutional layer can extract a certain feature in an image. Each traffic sign
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][img0] ![alt text][img1] ![alt text][img2] ![alt text][img3] ![alt text][img4] ![alt text][img5]
+| image 0	(Yield) | image 1	(Turn right ahead) | image 2 (Priority road) | image 3	(Speed limit 30km/h) | image 4 (Speed limit 120km/h) | image 5 (No passing)		         |
+|:-----------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:| 
+| ![alt text][img0] | ![alt text][img1] | ![alt text][img2] | ![alt text][img3] | ![alt text][img4] | ![alt text][img5] |
 
-The first image might be difficult to classify because ...
+The traffic sign with speed limit number could be difficult since there are speed limit sign with other number too.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
 
-| Image			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Image			              |     Prediction	 					| 
+|:---------------------:|:--------------------:| 
+| Yield          		     | Yield   							    		| 
+| Turn right ahead      | Turn right ahead 				|
+| Priority road         | Priority road						  |
+| Speed limit 30km/h    | Speed limit 30km/h			|
+| Speed limit 120km/h   | Speed limit 120km/h 	|
+| No passing            | No passing           | 
 
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
