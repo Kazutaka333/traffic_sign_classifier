@@ -21,6 +21,11 @@ The goals / steps of this project are the following:
 
 [original]: ./writeup_images/original.png "original image"
 [gray]: ./writeup_images/gray.png "grayscale image"
+[CLAHE]: ./writeup_images/CLAHE.png "CLAHE image"
+[normalized]: ./writeup_images/normalized.png "normalized image"
+[augmented1]: ./writeup_images/augmented1.png "augmented image 1"
+[augmented2]: ./writeup_images/augmented2.png "augmented image 2"
+[augmented3]: ./writeup_images/augmented3.png "augmented image 3"
 
 
 [image1]: ./examples/visualization.jpg "Visualization"
@@ -69,26 +74,28 @@ Here are histograms of training, validation, test set categorized into each sign
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-As a first step, I decided to convert the images to grayscale because that reduces the large amount of training time without sacrificing the accuracy of the classifier.
-
-My preprocess includes grayscale, normalization, and, contrast limited adaptive histogram equalization(CLAHE).
+As a first step, I decided to convert the images to grayscale because that reduces the large amount of training time without sacrificing the accuracy of the classifier. Contrast limited adaptive histogram equalization (CLAHE) gives more vivid contrast in a image, which, I think, helps the model to recognize the line and curves better. I've chosen the division by 255 as my normalization and it actually showed the drasctic improvment on accuracy.
 
 Here is an example of each proccessed image.
 
 
 ![alt text][original]
 
-![alt text][gray] 
+![alt text][gray]
 
-As a last step, I normalized the image data because ...
+![alt_text][CLAHE]
 
-I decided to generate additional data because ... 
+![alt_text][normalized]
 
-To add more data to the the data set, I used the following techniques because ... 
+To obtain the better accuracy, I've created augmented data from the training set. For preventing fake data from being too much noise for the model, the augmentation process needed to be one that alter the original image a little bit and randomly and I've added three ways of image modification; warping, zooming, and, tilting. Augmented data is created from applying those three methods by a random small extent.
 
-Here is an example of an original image and an augmented image:
+Here are a couple of examples of an augmented image:
 
-![alt text][image3]
+![alt text][augmented1]
+
+![alt text][augmented2]
+
+![alt text][augmented3]
 
 The difference between the original data set and the augmented data set is the following ... 
 
