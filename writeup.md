@@ -91,10 +91,6 @@ To obtain the better accuracy, I've created augmented data from the training set
 Here are a couple of examples of an augmented image:
 
 
-
-
-
-
 ![alt text][augmented1] | ![alt text][augmented2] | ![alt text][augmented3] 
 :--------------------:|:-----------------:|:-----------------------:
  | | |
