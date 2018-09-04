@@ -163,7 +163,9 @@ Here are five German traffic signs that I found on the web:
 |:-----------------:|:-----------------:|:-----------------:|
 | ![alt text][img0] | ![alt text][img1] | ![alt text][img2] |
 | I think this image could be pretty easy to classify due to the vivid contrast between the background and the sign | This sign also has good separation from the background and it's the almost ideal image of the sign | this picture is a little darker than other pictures and the part of a house is in the picture, which might affect the classifier accuracy |
+
 | image 3	(Speed limit 30km/h) | image 4 (Speed limit 120km/h) | image 5 (No passing) |
+|:-----------------:|:-----------------:|:-----------------:|
 | ![alt text][img3] | ![alt text][img4] | ![alt text][img5] |
 | This picture is the smallest among these 6 but it's not really an issue since each picture is fed into the classifier after resizing into 32x32 | This picture has the nice plain background as well as image 1. The traffic sign with speed limit number could be more challenging since there are speed limit sign with other numbers as well. | This image has the very strong contrast in the background which might interfere with the result of the classifier. |
 
