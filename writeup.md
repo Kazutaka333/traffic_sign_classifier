@@ -36,6 +36,7 @@ The goals / steps of this project are the following:
 [img5]: ./writeup_images/img5.jpg
 
 [bar_chart]: ./writeup_images/bar_chart.png
+[learning_curve]: ./writeup_images/learning_curve.png
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -147,11 +148,16 @@ Since I knew the number of images in each class was not even and simply more dif
 
 * Which parameters were tuned? How were they adjusted and why?
 
-I increased epoch to gain more accuracy. I increased the number of augmented data way more than I have right now to see if it shows any improvement.
+I first added more layers and increased epochs to reduce bias and continued it till the training accuracy became close to 100%. Then I added more data and dropout layer to reduce variance.
+I did not try any optimizer other than Adam optimizer.
+
+When I train the model, I print out validatino accuracy and training accuracy to see if it's overfitting or not. Since there many parameters to tweak, I wrote down the final accracy and what parameter and how I changed it after each training.
 
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
  
 Convolutional layer can extract a certain feature in an image. Each traffic sign that is meant to be not to mistaken by human has very distinctive visual feature. This is why convnet works well with this problem. Dropout and augmented data regularize the model and prevent overfitting. However, I have to say the thing that prevents me from submitting a project was definitely the normalization.
+
+![alt_text][learning_curve]
 
 ### Test a Model on New Images
 
